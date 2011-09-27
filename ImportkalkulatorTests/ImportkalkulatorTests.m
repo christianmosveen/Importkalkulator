@@ -2,19 +2,24 @@
 
 @implementation ImportkalkulatorTests
 
+@synthesize kalkuler;
+
 - (void)setUp
 {
     [super setUp];
+    kalkuler = [kalkuler init];
 }
 
 - (void)tearDown
 {
     [super tearDown];
+    [kalkuler release];
 }
 
-- (void)testExample
+- (void)testVekttrinn1
 {
-    assert(true == true);
+    NSNumber *delavgift = [kalkuler vekt:[NSNumber numberWithInt:1200]];
+    assert(delavgift == 0);
 }
 
 @end
