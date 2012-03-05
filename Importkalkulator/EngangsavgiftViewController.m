@@ -2,8 +2,11 @@
 
 @implementation EngangsavgiftViewController
 
-@synthesize str;
 @synthesize navn;
+@synthesize vekt;
+@synthesize effekt;
+@synthesize co2;
+@synthesize nox;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,11 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    navn.text = str;
 }
 
 - (void)viewDidUnload
 {
+    [self setVekt:nil];
+    [self setEffekt:nil];
+    [self setCo2:nil];
+    [self setNox:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -45,8 +51,11 @@
 
 - (void)dealloc
 {
-    [str release];
     [navn release];
+    [vekt release];
+    [effekt release];
+    [co2 release];
+    [nox release];
     [super dealloc];
 }
 

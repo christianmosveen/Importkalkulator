@@ -2,6 +2,9 @@
 
 @implementation KalkulerEngangsavgift
 
+int const MND = 2592000;
+int const AAR = 31536000;
+
 double const VEKTTRINN1 = 1150;
 double const VEKTTRINN2 = 1400;
 double const VEKTTRINN3 = 1500;
@@ -97,6 +100,12 @@ double const CO2TRINN5 = 240;
     return [self vekt:vekt] + [self effekt:effekt] + [self nox:nox] + [self co2:co2];
 }
 
+- (double)avgiftMedVekt:(int)vekt effekt:(int)effekt nox:(int)nox co2:(int)co2 registreringsdato:(NSDate *)registreringsdato
+{
+    double avgift = [self avgiftMedVekt:vekt effekt:effekt nox:nox co2:co2];
+    return round(avgift - (avgift * [self bruksfradrag:registreringsdato]));
+}
+
 - (double)vekt:(int)vekt
 {
     if (vekt <= VEKTTRINN1) {
@@ -145,6 +154,80 @@ double const CO2TRINN5 = 240;
     } else {
         return [self co2trinn6:co2];
     }
+}
+
+- (float)bruksfradrag:(NSDate *)registrert
+{
+    float bruksfradrag = 0.0f;
+    int diff = [NSDate new].timeIntervalSince1970 - registrert.timeIntervalSince1970;
+    if (diff >= 15*AAR)
+        bruksfradrag = 0.8f;
+    else if (diff >= 14*AAR)
+        bruksfradrag = 0.78f;
+    else if (diff >= 13*AAR)
+        bruksfradrag = 0.76f;
+    else if (diff >= 12*AAR)
+        bruksfradrag = 0.73f;
+    else if (diff >= 11*AAR)
+        bruksfradrag = 0.70f;
+    else if (diff >= 10*AAR)
+        bruksfradrag = 0.67f;
+    else if (diff >= 9*AAR)
+        bruksfradrag = 0.63f;
+    else if (diff >= 8*AAR)
+        bruksfradrag = 0.59f;
+    else if (diff >= 7*AAR)
+        bruksfradrag = 0.55f;
+    else if (diff >= 6*AAR)
+        bruksfradrag = 0.50f;
+    else if (diff >= 5*AAR)
+        bruksfradrag = 0.45f;
+    else if (diff >= 4*AAR)
+        bruksfradrag = 0.42f;
+    else if (diff >= (3*AAR+6*MND))
+        bruksfradrag = 0.39f;
+    else if (diff >= 3*AAR)
+        bruksfradrag = 0.36f;
+    else if (diff >= (2*AAR+6*MND))
+        bruksfradrag = 0.33f;
+    else if (diff >= 2*AAR)
+        bruksfradrag = 0.30f;
+    else if (diff >= (AAR+10*MND))
+        bruksfradrag = 0.27f;
+    else if (diff >= (AAR+8*MND))
+        bruksfradrag = 0.25f;
+    else if (diff >= (AAR+6*MND))
+        bruksfradrag = 0.23f;
+    else if (diff >= (AAR+4*MND))
+        bruksfradrag = 0.21f;
+    else if (diff >= (AAR+2*MND))
+        bruksfradrag = 0.19f;
+    else if (diff >= (AAR))
+        bruksfradrag = 0.17f;
+    else if (diff >= (11*MND))
+        bruksfradrag = 0.16f;
+    else if (diff >= (10*MND))
+        bruksfradrag = 0.15f;
+    else if (diff >= (9*MND))
+        bruksfradrag = 0.14f;
+    else if (diff >= (8*MND))
+        bruksfradrag = 0.13f;
+    else if (diff >= (7*MND))
+        bruksfradrag = 0.12f;
+    else if (diff >= (6*MND))
+        bruksfradrag = 0.11f;
+    else if (diff >= (5*MND))
+        bruksfradrag = 0.10f;
+    else if (diff >= (4*MND))
+        bruksfradrag = 0.08f;
+    else if (diff >= (3*MND))
+        bruksfradrag = 0.06f;
+    else if (diff >= (2*MND))
+        bruksfradrag = 0.04f;
+    else if (diff >= (1*MND))
+        bruksfradrag = 0.02f;
+    
+    return bruksfradrag;
 }
 
 @end

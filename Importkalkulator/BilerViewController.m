@@ -114,8 +114,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EngangsavgiftViewController *engangsavgiftViewController = [[EngangsavgiftViewController alloc] init];
-    engangsavgiftViewController.title = @"Engangsavgift";
-    engangsavgiftViewController.str = [biler objectAtIndex:indexPath.row];
+    engangsavgiftViewController.title = [biler objectAtIndex:indexPath.row];
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
     
