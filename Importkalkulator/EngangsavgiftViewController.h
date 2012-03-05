@@ -8,4 +8,6 @@
 @property (retain, nonatomic) IBOutlet UILabel *co2;
 @property (retain, nonatomic) IBOutlet UILabel *nox;
 
+- (IBAction)vektEndret:(id)sender;
+
 @end

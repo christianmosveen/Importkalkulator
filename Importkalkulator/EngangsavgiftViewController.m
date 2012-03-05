@@ -59,4 +59,9 @@
     [super dealloc];
 }
 
+- (IBAction)vektEndret:(id)sender
+{
+    
+}
+
 @end
