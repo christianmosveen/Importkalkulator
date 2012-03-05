@@ -3,6 +3,6 @@
 
 @interface BilerViewController : UITableViewController
 
-@property (nonatomic, retain) NSMutableArray *biler;
+@property (nonatomic) NSMutableArray *biler;
 
 @end

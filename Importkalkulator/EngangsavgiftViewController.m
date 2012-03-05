@@ -49,15 +49,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)dealloc
-{
-    [navn release];
-    [vekt release];
-    [effekt release];
-    [co2 release];
-    [nox release];
-    [super dealloc];
-}
 
 - (IBAction)vektEndret:(id)sender
 {

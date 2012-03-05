@@ -31,7 +31,6 @@
     
     UIBarButtonItem *leggTilButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leggTilBil)];
     self.navigationItem.rightBarButtonItem = leggTilButton;
-    [leggTilButton release];
 }
 
 - (void)viewDidUnload
@@ -85,7 +84,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     cell.textLabel.text = [biler objectAtIndex:indexPath.row];
@@ -118,7 +117,6 @@
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
     
-    [engangsavgiftViewController release];
 }
 
 - (void)leggTilBil
@@ -128,13 +126,7 @@
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
     
-    [engangsavgiftViewController release];
 }
 
-- (void)dealloc 
-{
-    [biler release];
-    [super dealloc];
-}
 
 @end
