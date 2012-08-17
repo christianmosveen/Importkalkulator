@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F08204F143256C900C0A258 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F08204E143256C800C0A258 /* SenTestingKit.framework */; };
+		7F082050143256C900C0A258 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C1C83142FA6FA00A98207 /* UIKit.framework */; };
+		7F082051143256C900C0A258 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C1C85142FA6FA00A98207 /* Foundation.framework */; };
+		7F082052143256C900C0A258 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C1C87142FA6FA00A98207 /* CoreGraphics.framework */; };
+		7F082058143256C900C0A258 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F082056143256C900C0A258 /* InfoPlist.strings */; };
+		7F08205A143256C900C0A258 /* ImportkalkulatorTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 7F082059143256C900C0A258 /* ImportkalkulatorTests.h */; };
+		7F08205C143256C900C0A258 /* ImportkalkulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08205B143256C900C0A258 /* ImportkalkulatorTests.m */; };
+		7F0820641432693200C0A258 /* KalkulerEngangsavgift.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0820631432693100C0A258 /* KalkulerEngangsavgift.m */; };
+		7F8C1C84142FA6FA00A98207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C1C83142FA6FA00A98207 /* UIKit.framework */; };
+		7F8C1C86142FA6FA00A98207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C1C85142FA6FA00A98207 /* Foundation.framework */; };
+		7F8C1C88142FA6FA00A98207 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C1C87142FA6FA00A98207 /* CoreGraphics.framework */; };
+		7F8C1C8E142FA6FA00A98207 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C1C8C142FA6FA00A98207 /* InfoPlist.strings */; };
+		7F8C1C90142FA6FA00A98207 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C1C8F142FA6FA00A98207 /* main.m */; };
+		7F8C1C94142FA6FA00A98207 /* ImportkalkulatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C1C93142FA6FA00A98207 /* ImportkalkulatorAppDelegate.m */; };
+		7F8C1C97142FA6FA00A98207 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C1C95142FA6FA00A98207 /* MainWindow.xib */; };
+		7F8C1CA0142FADF900A98207 /* BilerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C1C9E142FADF900A98207 /* BilerViewController.m */; };
+		7F8C1CA1142FADF900A98207 /* BilerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C1C9F142FADF900A98207 /* BilerViewController.xib */; };
+		7F8C1CA5142FB52200A98207 /* EngangsavgiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C1CA3142FB52200A98207 /* EngangsavgiftViewController.m */; };
+		7F8C1CA6142FB52200A98207 /* EngangsavgiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C1CA4142FB52200A98207 /* EngangsavgiftViewController.xib */; };
+		7F9E27F714E91D3A0008E03D /* KalkulerEngangsavgift.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0820631432693100C0A258 /* KalkulerEngangsavgift.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F08204D143256C800C0A258 /* ImportkalkulatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImportkalkulatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F08204E143256C800C0A258 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7F082055143256C900C0A258 /* ImportkalkulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImportkalkulatorTests-Info.plist"; sourceTree = "<group>"; };
+		7F082057143256C900C0A258 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F082059143256C900C0A258 /* ImportkalkulatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportkalkulatorTests.h; sourceTree = "<group>"; };
+		7F08205B143256C900C0A258 /* ImportkalkulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImportkalkulatorTests.m; sourceTree = "<group>"; };
+		7F08205D143256C900C0A258 /* ImportkalkulatorTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImportkalkulatorTests-Prefix.pch"; sourceTree = "<group>"; };
+		7F0820621432693100C0A258 /* KalkulerEngangsavgift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalkulerEngangsavgift.h; sourceTree = "<group>"; };
+		7F0820631432693100C0A258 /* KalkulerEngangsavgift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalkulerEngangsavgift.m; sourceTree = "<group>"; };
+		7F8C1C7F142FA6F900A98207 /* Importkalkulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Importkalkulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8C1C83142FA6FA00A98207 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F8C1C85142FA6FA00A98207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F8C1C87142FA6FA00A98207 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F8C1C8B142FA6FA00A98207 /* Importkalkulator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Importkalkulator-Info.plist"; sourceTree = "<group>"; };
+		7F8C1C8D142FA6FA00A98207 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F8C1C8F142FA6FA00A98207 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F8C1C91142FA6FA00A98207 /* Importkalkulator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Importkalkulator-Prefix.pch"; sourceTree = "<group>"; };
+		7F8C1C92142FA6FA00A98207 /* ImportkalkulatorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportkalkulatorAppDelegate.h; sourceTree = "<group>"; };
+		7F8C1C93142FA6FA00A98207 /* ImportkalkulatorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImportkalkulatorAppDelegate.m; sourceTree = "<group>"; };
+		7F8C1C96142FA6FA00A98207 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7F8C1C9D142FADF900A98207 /* BilerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BilerViewController.h; sourceTree = "<group>"; };
+		7F8C1C9E142FADF900A98207 /* BilerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BilerViewController.m; sourceTree = "<group>"; };
+		7F8C1C9F142FADF900A98207 /* BilerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BilerViewController.xib; sourceTree = "<group>"; };
+		7F8C1CA2142FB52200A98207 /* EngangsavgiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngangsavgiftViewController.h; sourceTree = "<group>"; };
+		7F8C1CA3142FB52200A98207 /* EngangsavgiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngangsavgiftViewController.m; sourceTree = "<group>"; };
+		7F8C1CA4142FB52200A98207 /* EngangsavgiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EngangsavgiftViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F082049143256C800C0A258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F08204F143256C900C0A258 /* SenTestingKit.framework in Frameworks */,
+				7F082050143256C900C0A258 /* UIKit.framework in Frameworks */,
+				7F082051143256C900C0A258 /* Foundation.framework in Frameworks */,
+				7F082052143256C900C0A258 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8C1C7C142FA6F900A98207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8C1C84142FA6FA00A98207 /* UIKit.framework in Frameworks */,
+				7F8C1C86142FA6FA00A98207 /* Foundation.framework in Frameworks */,
+				7F8C1C88142FA6FA00A98207 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F082053143256C900C0A258 /* ImportkalkulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F082059143256C900C0A258 /* ImportkalkulatorTests.h */,
+				7F08205B143256C900C0A258 /* ImportkalkulatorTests.m */,
+				7F082054143256C900C0A258 /* Supporting Files */,
+			);
+			path = ImportkalkulatorTests;
+			sourceTree = "<group>";
+		};
+		7F082054143256C900C0A258 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F082055143256C900C0A258 /* ImportkalkulatorTests-Info.plist */,
+				7F082056143256C900C0A258 /* InfoPlist.strings */,
+				7F08205D143256C900C0A258 /* ImportkalkulatorTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F8C1C74142FA6F900A98207 = {
+			isa = PBXGroup;
+			children = (
+				7F8C1C89142FA6FA00A98207 /* Importkalkulator */,
+				7F082053143256C900C0A258 /* ImportkalkulatorTests */,
+				7F8C1C82142FA6F900A98207 /* Frameworks */,
+				7F8C1C80142FA6F900A98207 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F8C1C80142FA6F900A98207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F8C1C7F142FA6F900A98207 /* Importkalkulator.app */,
+				7F08204D143256C800C0A258 /* ImportkalkulatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F8C1C82142FA6F900A98207 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F8C1C83142FA6FA00A98207 /* UIKit.framework */,
+				7F8C1C85142FA6FA00A98207 /* Foundation.framework */,
+				7F8C1C87142FA6FA00A98207 /* CoreGraphics.framework */,
+				7F08204E143256C800C0A258 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F8C1C89142FA6FA00A98207 /* Importkalkulator */ = {
+			isa = PBXGroup;
+			children = (
+				7F8C1C92142FA6FA00A98207 /* ImportkalkulatorAppDelegate.h */,
+				7F8C1C93142FA6FA00A98207 /* ImportkalkulatorAppDelegate.m */,
+				7F8C1C95142FA6FA00A98207 /* MainWindow.xib */,
+				7F8C1C9D142FADF900A98207 /* BilerViewController.h */,
+				7F8C1C9E142FADF900A98207 /* BilerViewController.m */,
+				7F8C1C9F142FADF900A98207 /* BilerViewController.xib */,
+				7F8C1CA2142FB52200A98207 /* EngangsavgiftViewController.h */,
+				7F8C1CA3142FB52200A98207 /* EngangsavgiftViewController.m */,
+				7F8C1CA4142FB52200A98207 /* EngangsavgiftViewController.xib */,
+				7F0820621432693100C0A258 /* KalkulerEngangsavgift.h */,
+				7F0820631432693100C0A258 /* KalkulerEngangsavgift.m */,
+				7F8C1C8A142FA6FA00A98207 /* Supporting Files */,
+			);
+			path = Importkalkulator;
+			sourceTree = "<group>";
+		};
+		7F8C1C8A142FA6FA00A98207 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F8C1C8B142FA6FA00A98207 /* Importkalkulator-Info.plist */,
+				7F8C1C8C142FA6FA00A98207 /* InfoPlist.strings */,
+				7F8C1C8F142FA6FA00A98207 /* main.m */,
+				7F8C1C91142FA6FA00A98207 /* Importkalkulator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F08204C143256C800C0A258 /* ImportkalkulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F082060143256C900C0A258 /* Build configuration list for PBXNativeTarget "ImportkalkulatorTests" */;
+			buildPhases = (
+				7F082048143256C800C0A258 /* Sources */,
+				7F082049143256C800C0A258 /* Frameworks */,
+				7F08204A143256C800C0A258 /* Resources */,
+				7F08204B143256C800C0A258 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImportkalkulatorTests;
+			productName = ImportkalkulatorTests;
+			productReference = 7F08204D143256C800C0A258 /* ImportkalkulatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		7F8C1C7E142FA6F900A98207 /* Importkalkulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F8C1C9A142FA6FA00A98207 /* Build configuration list for PBXNativeTarget "Importkalkulator" */;
+			buildPhases = (
+				7F8C1C7B142FA6F900A98207 /* Sources */,
+				7F8C1C7C142FA6F900A98207 /* Frameworks */,
+				7F8C1C7D142FA6F900A98207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Importkalkulator;
+			productName = Importkalkulator;
+			productReference = 7F8C1C7F142FA6F900A98207 /* Importkalkulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F8C1C76142FA6F900A98207 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7F8C1C79142FA6F900A98207 /* Build configuration list for PBXProject "Importkalkulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7F8C1C74142FA6F900A98207;
+			productRefGroup = 7F8C1C80142FA6F900A98207 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F8C1C7E142FA6F900A98207 /* Importkalkulator */,
+				7F08204C143256C800C0A258 /* ImportkalkulatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F08204A143256C800C0A258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F082058143256C900C0A258 /* InfoPlist.strings in Resources */,
+				7F08205A143256C900C0A258 /* ImportkalkulatorTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8C1C7D142FA6F900A98207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8C1C8E142FA6FA00A98207 /* InfoPlist.strings in Resources */,
+				7F8C1C97142FA6FA00A98207 /* MainWindow.xib in Resources */,
+				7F8C1CA1142FADF900A98207 /* BilerViewController.xib in Resources */,
+				7F8C1CA6142FB52200A98207 /* EngangsavgiftViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F08204B143256C800C0A258 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F082048143256C800C0A258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F08205C143256C900C0A258 /* ImportkalkulatorTests.m in Sources */,
+				7F9E27F714E91D3A0008E03D /* KalkulerEngangsavgift.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8C1C7B142FA6F900A98207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8C1C90142FA6FA00A98207 /* main.m in Sources */,
+				7F8C1C94142FA6FA00A98207 /* ImportkalkulatorAppDelegate.m in Sources */,
+				7F8C1CA0142FADF900A98207 /* BilerViewController.m in Sources */,
+				7F8C1CA5142FB52200A98207 /* EngangsavgiftViewController.m in Sources */,
+				7F0820641432693200C0A258 /* KalkulerEngangsavgift.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F082056143256C900C0A258 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F082057143256C900C0A258 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F8C1C8C142FA6FA00A98207 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F8C1C8D142FA6FA00A98207 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F8C1C95142FA6FA00A98207 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F8C1C96142FA6FA00A98207 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F08205E143256C900C0A258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImportkalkulatorTests/ImportkalkulatorTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "ImportkalkulatorTests/ImportkalkulatorTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7F08205F143256C900C0A258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImportkalkulatorTests/ImportkalkulatorTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "ImportkalkulatorTests/ImportkalkulatorTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		7F8C1C98142FA6FA00A98207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7F8C1C99142FA6FA00A98207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F8C1C9B142FA6FA00A98207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Importkalkulator/Importkalkulator-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Importkalkulator/Importkalkulator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F8C1C9C142FA6FA00A98207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Importkalkulator/Importkalkulator-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Importkalkulator/Importkalkulator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F082060143256C900C0A258 /* Build configuration list for PBXNativeTarget "ImportkalkulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F08205E143256C900C0A258 /* Debug */,
+				7F08205F143256C900C0A258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F8C1C79142FA6F900A98207 /* Build configuration list for PBXProject "Importkalkulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F8C1C98142FA6FA00A98207 /* Debug */,
+				7F8C1C99142FA6FA00A98207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F8C1C9A142FA6FA00A98207 /* Build configuration list for PBXNativeTarget "Importkalkulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F8C1C9B142FA6FA00A98207 /* Debug */,
+				7F8C1C9C142FA6FA00A98207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F8C1C76142FA6F900A98207 /* Project object */;
+}
