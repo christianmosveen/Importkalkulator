@@ -27,6 +27,8 @@
 		7F8C1CA5142FB52200A98207 /* EngangsavgiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C1CA3142FB52200A98207 /* EngangsavgiftViewController.m */; };
 		7F8C1CA6142FB52200A98207 /* EngangsavgiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C1CA4142FB52200A98207 /* EngangsavgiftViewController.xib */; };
 		7F9E27F714E91D3A0008E03D /* KalkulerEngangsavgift.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0820631432693100C0A258 /* KalkulerEngangsavgift.m */; };
+		AA5566A715DE793D00D6401B /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5566A515DE793D00D6401B /* InfoViewController.m */; };
+		AA5566A815DE793D00D6401B /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5566A615DE793D00D6401B /* InfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		7F8C1CA2142FB52200A98207 /* EngangsavgiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngangsavgiftViewController.h; sourceTree = "<group>"; };
 		7F8C1CA3142FB52200A98207 /* EngangsavgiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngangsavgiftViewController.m; sourceTree = "<group>"; };
 		7F8C1CA4142FB52200A98207 /* EngangsavgiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EngangsavgiftViewController.xib; sourceTree = "<group>"; };
+		AA5566A415DE793D00D6401B /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		AA5566A515DE793D00D6401B /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		AA5566A615DE793D00D6401B /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,9 @@
 				7F8C1CA4142FB52200A98207 /* EngangsavgiftViewController.xib */,
 				7F0820621432693100C0A258 /* KalkulerEngangsavgift.h */,
 				7F0820631432693100C0A258 /* KalkulerEngangsavgift.m */,
+				AA5566A415DE793D00D6401B /* InfoViewController.h */,
+				AA5566A515DE793D00D6401B /* InfoViewController.m */,
+				AA5566A615DE793D00D6401B /* InfoViewController.xib */,
 				7F8C1C8A142FA6FA00A98207 /* Supporting Files */,
 			);
 			path = Importkalkulator;
@@ -245,6 +253,7 @@
 				7F8C1C97142FA6FA00A98207 /* MainWindow.xib in Resources */,
 				7F8C1CA1142FADF900A98207 /* BilerViewController.xib in Resources */,
 				7F8C1CA6142FB52200A98207 /* EngangsavgiftViewController.xib in Resources */,
+				AA5566A815DE793D00D6401B /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +294,7 @@
 				7F8C1CA0142FADF900A98207 /* BilerViewController.m in Sources */,
 				7F8C1CA5142FB52200A98207 /* EngangsavgiftViewController.m in Sources */,
 				7F0820641432693200C0A258 /* KalkulerEngangsavgift.m in Sources */,
+				AA5566A715DE793D00D6401B /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,12 +409,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christian Mosveen (D4PBA3N5G9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Importkalkulator/Importkalkulator-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Importkalkulator/Importkalkulator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

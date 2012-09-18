@@ -1,13 +1,15 @@
 #import <UIKit/UIKit.h>
 #import "KalkulerEngangsavgift.h"
+#import "InfoViewController.h"
 
-@interface EngangsavgiftViewController : UIViewController
+@interface EngangsavgiftViewController : UIViewController <InfoViewControllerDelegate>
 
 @property (nonatomic, retain) KalkulerEngangsavgift *kalkuler;
 @property int vekt;
 @property int effekt;
 @property int co2;
 @property int nox;
+@property NSDate* registreringsdato;
 @property float avgift;
 
 @property (nonatomic) IBOutlet UITextField *navn;
@@ -28,5 +30,9 @@
 - (IBAction)effektEndret:(id)sender;
 - (IBAction)co2Endret:(id)sender;
 - (IBAction)noxEndret:(id)sender;
+- (void)regDatoEndret:(NSDate *)dato;
+
+- (IBAction)visInfo:(id)sender;
+
 
 @end

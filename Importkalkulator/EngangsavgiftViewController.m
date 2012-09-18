@@ -7,6 +7,7 @@
 @synthesize effekt;
 @synthesize co2;
 @synthesize nox;
+@synthesize registreringsdato;
 @synthesize avgift;
 
 @synthesize navn;
@@ -27,7 +28,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         kalkuler = [[KalkulerEngangsavgift alloc] init];
-        
     }
     return self;
 }
@@ -113,11 +113,26 @@
     [self kalkulerAvgift];
 }
 
+- (void)regDatoEndret:(NSDate *)dato {
+    registreringsdato = dato;
+    [self kalkulerAvgift];
+}
+
+- (IBAction)visInfo:(id)sender {
+    InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+    infoViewController.delegate = self;
+    infoViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:infoViewController animated:YES];
+}
+
 - (void)kalkulerAvgift {
     avgift = [kalkuler avgiftMedVekt:vekt effekt:effekt nox:nox co2:co2];
     NSString *avgiftString = [[NSString alloc] initWithFormat:@"%d", (int)(avgift+0.5f)];
     avgiftLabel.text = avgiftString;
 }
 
+- (void)infoViewControllerDidFinish:(InfoViewController *)controller {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 @end
