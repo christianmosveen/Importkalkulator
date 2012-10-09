@@ -28,6 +28,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         kalkuler = [[KalkulerEngangsavgift alloc] init];
+        registreringsdato = [NSDate date];
     }
     return self;
 }
@@ -121,13 +122,14 @@
 - (IBAction)visInfo:(id)sender {
     InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
     infoViewController.delegate = self;
+    infoViewController.registreringsdato = registreringsdato;
     infoViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:infoViewController animated:YES];
 }
 
 - (void)kalkulerAvgift {
-    avgift = [kalkuler avgiftMedVekt:vekt effekt:effekt nox:nox co2:co2];
-    NSString *avgiftString = [[NSString alloc] initWithFormat:@"%d", (int)(avgift+0.5f)];
+    avgift = [kalkuler avgiftMedVekt:vekt effekt:effekt nox:nox co2:co2 registreringsdato:registreringsdato];
+    NSString *avgiftString = [[NSString alloc] initWithFormat:@"%d kr", (int)(avgift+0.5f)];
     avgiftLabel.text = avgiftString;
 }
 

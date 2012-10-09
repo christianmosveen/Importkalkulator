@@ -5,12 +5,14 @@
 @end
 
 @implementation InfoViewController
+@synthesize registreringsdatoPicker;
+@synthesize registreringsdato;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -18,10 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    registreringsdatoPicker.date = registreringsdato;
 }
 
 - (void)viewDidUnload
 {
+    [self setRegistreringsdatoPicker:nil];
     [super viewDidUnload];
 }
 
@@ -36,7 +40,7 @@
 }
 
 - (IBAction)datoEndret:(id)sender {
-    [self.delegate regDatoEndret:nil];
+    [self.delegate regDatoEndret:registreringsdatoPicker.date];
 }
 
 @end
