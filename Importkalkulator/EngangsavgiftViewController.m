@@ -45,11 +45,6 @@
 
 - (void)viewDidLoad
 {
-    vekt = 1300;
-    effekt = 77;
-    co2 = 119;
-    nox = 60;
-    
     vektSlider.value = vekt;
     effektSlider.value = effekt;
     co2Slider.value = co2;

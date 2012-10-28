@@ -26,8 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    biler = [[NSMutableArray alloc] initWithObjects:@"2010 Golf TDI", @"2009 Audi A4 Quattro", @"2010 Touran 2,0 TDI", nil];
+    
+    Avgift *bil1 = [[Avgift alloc] initWithBil:@"2010 Golf TDI" vekt:1300 effekt:77 co2:119 nox:60 registreringsdato:[NSDate date]];
+    Avgift *bil2 = [[Avgift alloc] initWithBil:@"2009 Audi A4 Quattro" vekt:1500 effekt:100 co2:130 nox:74 registreringsdato:[NSDate date]];
+    Avgift *bil3 = [[Avgift alloc] initWithBil:@"2010 Touran 2,0 TDI" vekt:1600 effekt:110 co2:129 nox:68 registreringsdato:[NSDate date]];
+    
+    biler = [[NSMutableArray alloc] initWithObjects:bil1, bil2, bil3, nil];
     
     UIBarButtonItem *leggTilButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leggTilBil)];
     self.navigationItem.rightBarButtonItem = leggTilButton;
@@ -87,7 +91,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [biler objectAtIndex:indexPath.row];
+    Avgift* avgift = [biler objectAtIndex:indexPath.row];
+    cell.textLabel.text = avgift.bil;
         
     return cell;
 }
@@ -97,7 +102,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EngangsavgiftViewController *engangsavgiftViewController = [[EngangsavgiftViewController alloc] init];
-    engangsavgiftViewController.title = [biler objectAtIndex:indexPath.row];
+    Avgift* avgift = [biler objectAtIndex:indexPath.row];
+    engangsavgiftViewController.title = avgift.bil;
+    engangsavgiftViewController.vekt = avgift.vekt;
+    engangsavgiftViewController.effekt = avgift.effekt;
+    engangsavgiftViewController.co2 = avgift.co2;
+    engangsavgiftViewController.nox = avgift.nox;
+    engangsavgiftViewController.registreringsdato = avgift.registreringsdato;
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
     
