@@ -1,18 +1,15 @@
 #import <UIKit/UIKit.h>
 #import "KalkulerEngangsavgift.h"
 #import "InfoViewController.h"
+#import "Bil.h"
 
 @interface EngangsavgiftViewController : UIViewController <InfoViewControllerDelegate>
 
 @property (nonatomic, retain) KalkulerEngangsavgift *kalkuler;
-@property int vekt;
-@property int effekt;
-@property int co2;
-@property int nox;
-@property NSDate* registreringsdato;
+
+@property Bil *bil;
 @property float avgift;
 
-@property (nonatomic) IBOutlet UITextField *navn;
 @property (nonatomic) IBOutlet UISlider *vektSlider;
 @property (nonatomic) IBOutlet UISlider *effektSlider;
 @property (nonatomic) IBOutlet UISlider *co2Slider;

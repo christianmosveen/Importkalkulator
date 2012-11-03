@@ -1,4 +1,5 @@
 #import "ImportkalkulatorAppDelegate.h"
+#import "BilStore.h"
 
 @implementation ImportkalkulatorAppDelegate
 
@@ -22,10 +23,11 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
+    BOOL success = [[BilStore instance] lagre];
+    if (success)
+        NSLog(@"Lagret alle biler");
+    else
+        NSLog(@"Lagring feilet");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

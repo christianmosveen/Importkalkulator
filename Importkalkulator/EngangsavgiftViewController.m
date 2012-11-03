@@ -3,14 +3,10 @@
 @implementation EngangsavgiftViewController
 
 @synthesize kalkuler;
-@synthesize vekt;
-@synthesize effekt;
-@synthesize co2;
-@synthesize nox;
-@synthesize registreringsdato;
-@synthesize avgift;
 
-@synthesize navn;
+@synthesize bil;
+
+@synthesize avgift;
 @synthesize avgiftLabel;
 
 @synthesize vektSlider;
@@ -28,32 +24,28 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         kalkuler = [[KalkulerEngangsavgift alloc] init];
-        registreringsdato = [NSDate date];
     }
     return self;
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
-    vektSlider.value = vekt;
-    effektSlider.value = effekt;
-    co2Slider.value = co2;
-    noxSlider.value = nox;
+    vektSlider.value = bil.vekt;
+    effektSlider.value = bil.effekt;
+    co2Slider.value = bil.co2;
+    noxSlider.value = bil.nox;
     
-    vektLabel.text = [[NSString alloc] initWithFormat:@"%d", vekt];
-    effektLabel.text = [[NSString alloc] initWithFormat:@"%d", effekt];
-    co2Label.text = [[NSString alloc] initWithFormat:@"%d", co2];
-    noxLabel.text = [[NSString alloc] initWithFormat:@"%d", nox];
+    vektLabel.text = [[NSString alloc] initWithFormat:@"%d", bil.vekt];
+    effektLabel.text = [[NSString alloc] initWithFormat:@"%d", bil.effekt];
+    co2Label.text = [[NSString alloc] initWithFormat:@"%d", bil.co2];
+    noxLabel.text = [[NSString alloc] initWithFormat:@"%d", bil.nox];
     
     [self kalkulerAvgift];
     
@@ -82,48 +74,48 @@
 
 
 - (IBAction)vektEndret:(id)sender {
-    vekt = (int)(vektSlider.value+0.5f);
-    NSString *vektString = [[NSString alloc] initWithFormat:@"%d", vekt];
+    bil.vekt = (int)(vektSlider.value+0.5f);
+    NSString *vektString = [[NSString alloc] initWithFormat:@"%d", bil.vekt];
     vektLabel.text = vektString;
     [self kalkulerAvgift];
 }
 
 - (IBAction)effektEndret:(id)sender {
-    effekt = (int)(effektSlider.value+0.5f);
-    NSString *effektString = [[NSString alloc] initWithFormat:@"%d", effekt];
+    bil.effekt = (int)(effektSlider.value+0.5f);
+    NSString *effektString = [[NSString alloc] initWithFormat:@"%d", bil.effekt];
     effektLabel.text = effektString;
     [self kalkulerAvgift];
 }
 
 - (IBAction)co2Endret:(id)sender {
-    co2 = (int)(co2Slider.value+0.5f);
-    NSString *co2String = [[NSString alloc] initWithFormat:@"%d", co2];
+    bil.co2 = (int)(co2Slider.value+0.5f);
+    NSString *co2String = [[NSString alloc] initWithFormat:@"%d", bil.co2];
     co2Label.text = co2String;
     [self kalkulerAvgift];
 }
 
 - (IBAction)noxEndret:(id)sender {
-    nox = (int)(noxSlider.value+0.5f);
-    NSString *noxString = [[NSString alloc] initWithFormat:@"%d", nox];
+    bil.nox = (int)(noxSlider.value+0.5f);
+    NSString *noxString = [[NSString alloc] initWithFormat:@"%d", bil.nox];
     noxLabel.text = noxString;
     [self kalkulerAvgift];
 }
 
 - (void)regDatoEndret:(NSDate *)dato {
-    registreringsdato = dato;
+    bil.registreringsdato = dato;
     [self kalkulerAvgift];
 }
 
 - (IBAction)visInfo:(id)sender {
     InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
     infoViewController.delegate = self;
-    infoViewController.registreringsdato = registreringsdato;
+    infoViewController.registreringsdato = bil.registreringsdato;
     infoViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:infoViewController animated:YES];
 }
 
 - (void)kalkulerAvgift {
-    avgift = [kalkuler avgiftMedVekt:vekt effekt:effekt nox:nox co2:co2 registreringsdato:registreringsdato];
+    avgift = [kalkuler avgiftMedVekt:bil.vekt effekt:bil.effekt nox:bil.nox co2:bil.co2 registreringsdato:bil.registreringsdato];
     NSString *avgiftString = [[NSString alloc] initWithFormat:@"%d kr", (int)(avgift+0.5f)];
     avgiftLabel.text = avgiftString;
 }
