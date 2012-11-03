@@ -5,6 +5,9 @@
 @end
 
 @implementation InfoViewController
+
+@synthesize navnTextField;
+@synthesize navn;
 @synthesize registreringsdatoPicker;
 @synthesize registreringsdato;
 
@@ -20,12 +23,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    navnTextField.text = navn;
     registreringsdatoPicker.date = registreringsdato;
 }
 
 - (void)viewDidUnload
 {
     [self setRegistreringsdatoPicker:nil];
+    [self setNavnTextField:nil];
     [super viewDidUnload];
 }
 
@@ -36,6 +41,7 @@
 
 - (IBAction)done:(id)sender
 {
+    navn = navnTextField.text;
     [self.delegate infoViewControllerDidFinish:self];
 }
 

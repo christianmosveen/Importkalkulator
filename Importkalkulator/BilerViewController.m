@@ -4,6 +4,8 @@
 
 @implementation BilerViewController
 
+@synthesize biler;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -31,12 +33,14 @@
 
 - (void)viewDidUnload
 {
+    [self setBiler:nil];
     [super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [biler reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -92,7 +96,6 @@
 {
     EngangsavgiftViewController *engangsavgiftViewController = [[EngangsavgiftViewController alloc] init];
     Bil* bil = [[[BilStore instance] biler] objectAtIndex:indexPath.row];
-    engangsavgiftViewController.title = bil.navn;
     engangsavgiftViewController.bil = bil;
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
@@ -103,6 +106,7 @@
 {
     EngangsavgiftViewController *engangsavgiftViewController = [[EngangsavgiftViewController alloc] init];
     engangsavgiftViewController.title = @"Engangsavgift";
+    engangsavgiftViewController.bil = [[BilStore instance] opprettBil];
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
 }

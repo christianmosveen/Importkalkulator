@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad
 {
+    self.title = bil.navn;
     vektSlider.value = bil.vekt;
     effektSlider.value = bil.effekt;
     co2Slider.value = bil.co2;
@@ -110,6 +111,7 @@
     InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
     infoViewController.delegate = self;
     infoViewController.registreringsdato = bil.registreringsdato;
+    infoViewController.navn = bil.navn;
     infoViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:infoViewController animated:YES];
 }
@@ -121,6 +123,8 @@
 }
 
 - (void)infoViewControllerDidFinish:(InfoViewController *)controller {
+    bil.navn = controller.navn;
+    self.title = bil.navn;
     [self dismissModalViewControllerAnimated:YES];
 }
 

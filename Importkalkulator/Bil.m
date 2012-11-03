@@ -9,10 +9,10 @@
 @synthesize nox;
 @synthesize registreringsdato;
 
-- (id)initWithNavn:(NSString *)n {
+- (id)init {
     self = [super init];
     if (self) {
-        self.navn = n;
+        self.registreringsdato = [NSDate date];
     }
     
     return self;

@@ -3,4 +3,6 @@
 
 @interface BilerViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *biler;
+
 @end

@@ -38,6 +38,8 @@
 - (Bil *)opprettBil
 {
     Bil *bil = [[Bil alloc] init];
+    bil.navn = [NSString stringWithFormat:@"Bil %d", biler.count + 1];
+    [biler addObject:bil];
     return bil;
 }
 
