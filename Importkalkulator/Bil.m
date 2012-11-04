@@ -12,6 +12,10 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.vekt = 1000;
+        self.effekt = 65;
+        self.co2 = 50;
+        self.nox = 50;
         self.registreringsdato = [NSDate date];
     }
     

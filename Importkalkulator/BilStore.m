@@ -30,7 +30,7 @@
     return self;
 }
 
-- (NSArray *)biler
+- (NSMutableArray *)biler
 {
     return biler;
 }

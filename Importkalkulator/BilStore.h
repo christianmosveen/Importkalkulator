@@ -9,7 +9,7 @@
 
 + (BilStore *)instance;
 
-- (NSArray *)biler;
+- (NSMutableArray *)biler;
 - (Bil *)opprettBil;
 
 - (NSString *)arkivLokasjon;

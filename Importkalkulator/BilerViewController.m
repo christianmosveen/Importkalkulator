@@ -29,6 +29,9 @@
     
     UIBarButtonItem *leggTilButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leggTilBil)];
     self.navigationItem.rightBarButtonItem = leggTilButton;
+    
+    if ([[[BilStore instance] biler] count] == 0)
+        [self leggTilBil];
 }
 
 - (void)viewDidUnload
@@ -105,10 +108,17 @@
 - (void)leggTilBil
 {
     EngangsavgiftViewController *engangsavgiftViewController = [[EngangsavgiftViewController alloc] init];
-    engangsavgiftViewController.title = @"Engangsavgift";
     engangsavgiftViewController.bil = [[BilStore instance] opprettBil];
     
     [self.navigationController pushViewController:engangsavgiftViewController animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[[BilStore instance] biler] removeObjectAtIndex:indexPath.row];
+        [biler reloadData];
+    }
 }
 
 @end
