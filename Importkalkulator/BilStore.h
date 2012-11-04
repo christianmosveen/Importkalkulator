@@ -15,6 +15,4 @@
 - (NSString *)arkivLokasjon;
 - (BOOL)lagre;
 
-- (void)populer;
-
 @end

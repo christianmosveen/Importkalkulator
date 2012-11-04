@@ -86,7 +86,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<float key="IBUIValue">120</float>
-						<float key="IBUIMinValue">50</float>
+						<float key="IBUIMinValue">60</float>
 						<float key="IBUIMaxValue">250</float>
 					</object>
 					<object class="IBUISlider" id="695349049">
@@ -102,7 +102,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<float key="IBUIValue">90</float>
-						<float key="IBUIMinValue">50</float>
+						<float key="IBUIMinValue">60</float>
 						<float key="IBUIMaxValue">200</float>
 					</object>
 					<object class="IBUILabel" id="906567010">

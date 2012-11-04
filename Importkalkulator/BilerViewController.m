@@ -25,8 +25,6 @@
 {
     [super viewDidLoad];
     
-    //[[BilStore instance] populer];
-    
     UIBarButtonItem *leggTilButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leggTilBil)];
     self.navigationItem.rightBarButtonItem = leggTilButton;
     

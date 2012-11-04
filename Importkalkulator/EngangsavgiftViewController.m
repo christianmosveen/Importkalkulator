@@ -1,5 +1,7 @@
 #import "EngangsavgiftViewController.h"
 
+NSNumberFormatter *formatter;
+
 @implementation EngangsavgiftViewController
 
 @synthesize kalkuler;
@@ -24,13 +26,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         kalkuler = [[KalkulerEngangsavgift alloc] init];
+        
+        formatter = [[NSNumberFormatter alloc] init];
+        formatter.usesGroupingSeparator = YES;
+        formatter.groupingSeparator = @" ";
+        formatter.groupingSize = 3;
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - View lifecycle
@@ -53,51 +55,27 @@
     [super viewDidLoad];
 }
 
-- (void)viewDidUnload
-{
-    [self setVektLabel:nil];
-    [self setEffektLabel:nil];
-    [self setCo2Label:nil];
-    [self setNoxLabel:nil];
-    [self setAvgiftLabel:nil];
-    [self setVektSlider:nil];
-    [self setEffektSlider:nil];
-    [self setCo2Slider:nil];
-    [self setNoxSlider:nil];
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-
 - (IBAction)vektEndret:(id)sender {
     bil.vekt = (int)(vektSlider.value+0.5f);
-    NSString *vektString = [[NSString alloc] initWithFormat:@"%d", bil.vekt];
-    vektLabel.text = vektString;
+    vektLabel.text = [[NSString alloc] initWithFormat:@"%d", bil.vekt];
     [self kalkulerAvgift];
 }
 
 - (IBAction)effektEndret:(id)sender {
     bil.effekt = (int)(effektSlider.value+0.5f);
-    NSString *effektString = [[NSString alloc] initWithFormat:@"%d", bil.effekt];
-    effektLabel.text = effektString;
+    effektLabel.text = [[NSString alloc] initWithFormat:@"%d", bil.effekt];
     [self kalkulerAvgift];
 }
 
 - (IBAction)co2Endret:(id)sender {
     bil.co2 = (int)(co2Slider.value+0.5f);
-    NSString *co2String = [[NSString alloc] initWithFormat:@"%d", bil.co2];
-    co2Label.text = co2String;
+    co2Label.text = [[NSString alloc] initWithFormat:@"%d", bil.co2];
     [self kalkulerAvgift];
 }
 
 - (IBAction)noxEndret:(id)sender {
     bil.nox = (int)(noxSlider.value+0.5f);
-    NSString *noxString = [[NSString alloc] initWithFormat:@"%d", bil.nox];
-    noxLabel.text = noxString;
+    noxLabel.text = [[NSString alloc] initWithFormat:@"%d", bil.nox];
     [self kalkulerAvgift];
 }
 
@@ -117,14 +95,37 @@
 
 - (void)kalkulerAvgift {
     avgift = [kalkuler avgiftMedVekt:bil.vekt effekt:bil.effekt nox:bil.nox co2:bil.co2 registreringsdato:bil.registreringsdato];
-    NSString *avgiftString = [[NSString alloc] initWithFormat:@"%d kr", (int)(avgift+0.5f)];
-    avgiftLabel.text = avgiftString;
+    avgiftLabel.text = [[NSString alloc] initWithFormat:@"%@ kr", [formatter stringFromNumber:[NSNumber numberWithInt:(int)(avgift+0.5f)]]];
 }
 
 - (void)infoViewControllerDidFinish:(InfoViewController *)controller {
     bil.navn = controller.navn;
     self.title = bil.navn;
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidUnload
+{
+    [self setVektLabel:nil];
+    [self setEffektLabel:nil];
+    [self setCo2Label:nil];
+    [self setNoxLabel:nil];
+    [self setAvgiftLabel:nil];
+    [self setVektSlider:nil];
+    [self setEffektSlider:nil];
+    [self setCo2Slider:nil];
+    [self setNoxSlider:nil];
+    [super viewDidUnload];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

@@ -23,11 +23,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    BOOL success = [[BilStore instance] lagre];
-    if (success)
-        NSLog(@"Lagret alle biler");
-    else
-        NSLog(@"Lagring feilet");
+    [[BilStore instance] lagre];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

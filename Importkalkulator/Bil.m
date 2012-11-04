@@ -14,8 +14,8 @@
     if (self) {
         self.vekt = 1000;
         self.effekt = 65;
-        self.co2 = 50;
-        self.nox = 50;
+        self.co2 = 60;
+        self.nox = 60;
         self.registreringsdato = [NSDate date];
     }
     
