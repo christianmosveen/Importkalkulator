@@ -13,9 +13,9 @@ double const EFFEKTTRINN2 = 90;
 double const EFFEKTTRINN3 = 130;
 double const CO2TRINN1 = 50;
 double const CO2TRINN2 = 110;
-double const CO2TRINN3 = 130;
-double const CO2TRINN4 = 170;
-double const CO2TRINN5 = 240;
+double const CO2TRINN3 = 125;
+double const CO2TRINN4 = 165;
+double const CO2TRINN5 = 235;
 
 - (id)init
 {
@@ -30,67 +30,67 @@ double const CO2TRINN5 = 240;
 // PRIVATE
 - (double)vektTrinn1:(int)vekt
 {
-    return vekt * 36.89;
+    return vekt * 37.59;
 }
 
 - (double)vektTrinn2:(int)vekt
 {
-    return [self vektTrinn1:VEKTTRINN1] + (vekt - VEKTTRINN1) * 80.41;
+    return [self vektTrinn1:VEKTTRINN1] + (vekt - VEKTTRINN1) * 81.94;
 }
 
 - (double)vektTrinn3:(int)vekt
 {
-    return [self vektTrinn2:VEKTTRINN2] + (vekt - VEKTTRINN2) * 160.84;
+    return [self vektTrinn2:VEKTTRINN2] + (vekt - VEKTTRINN2) * 163.90;
 }
 
 - (double)vektTrinn4:(int)vekt
 {
-    return [self vektTrinn3:VEKTTRINN3] + (vekt - VEKTTRINN3) * 187.06;
+    return [self vektTrinn3:VEKTTRINN3] + (vekt - VEKTTRINN3) * 190.61;
 }
 
 - (int)effektTrinn2:(int)effekt
 {
-    return (effekt - EFFEKTTRINN1) * 315;
+    return (effekt - EFFEKTTRINN1) * 275;
 }
 
 - (int)effektTrinn3:(int)effekt
 {
-    return [self effektTrinn2:EFFEKTTRINN2] + (effekt - EFFEKTTRINN2) * 895;
+    return [self effektTrinn2:EFFEKTTRINN2] + (effekt - EFFEKTTRINN2) * 790;
 }
 
 - (int)effektTrinn4:(int)effekt
 {
-    return [self effektTrinn3:EFFEKTTRINN3] + (effekt - EFFEKTTRINN3) * 2200;
+    return [self effektTrinn3:EFFEKTTRINN3] + (effekt - EFFEKTTRINN3) * 1960;
 }
 
 - (int)co2trinn2:(int)co2
 {
-    return (CO2TRINN2 - co2) * -750;
+    return (CO2TRINN2 - co2) * -814;
 }
 
 - (int)co2trinn1:(int)co2
 {
-    return (CO2TRINN1 - co2) * -850 + [self co2trinn2:CO2TRINN1];
+    return (CO2TRINN1 - co2) * -966 + [self co2trinn2:CO2TRINN1];
 }
 
 - (int)co2trinn3:(int)co2
 {
-    return (co2 - CO2TRINN2) * 750;
+    return (co2 - CO2TRINN2) * 764;
 }
 
 - (int)co2trinn4:(int)co2
 {
-    return [self co2trinn3:CO2TRINN3] + (co2 - CO2TRINN3) * 756;
+    return [self co2trinn3:CO2TRINN3] + (co2 - CO2TRINN3) * 770;
 }
 
 - (int)co2trinn5:(int)co2
 {
-    return [self co2trinn4:CO2TRINN4] + (co2 - CO2TRINN4) * 1763;
+    return [self co2trinn4:CO2TRINN4] + (co2 - CO2TRINN4) * 1796;
 }
 
 - (int)co2trinn6:(int)co2
 {
-    return [self co2trinn5:CO2TRINN5] + (co2 - CO2TRINN5) * 2829;
+    return [self co2trinn5:CO2TRINN5] + (co2 - CO2TRINN5) * 2883;
 }
 
 
@@ -134,7 +134,7 @@ double const CO2TRINN5 = 240;
 
 - (int)nox:(int)nox
 {
-    return nox * 22;
+    return nox * 35;
 }
 
 - (int)co2:(int)co2
