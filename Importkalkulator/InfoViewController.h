@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *navnTextField;
 @property NSDate *registreringsdato;
 @property NSString *navn;
+@property (strong, nonatomic) IBOutlet UILabel *version;
 
 - (IBAction)done:(id)sender;
 - (IBAction)datoEndret:(id)sender;

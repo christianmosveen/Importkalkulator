@@ -10,6 +10,7 @@
 @synthesize navn;
 @synthesize registreringsdatoPicker;
 @synthesize registreringsdato;
+@synthesize version;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,12 +26,14 @@
     [super viewDidLoad];
     navnTextField.text = navn;
     registreringsdatoPicker.date = registreringsdato;
+    version.text = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
 }
 
 - (void)viewDidUnload
 {
     [self setRegistreringsdatoPicker:nil];
     [self setNavnTextField:nil];
+    [self setVersion:nil];
     [super viewDidUnload];
 }
 
