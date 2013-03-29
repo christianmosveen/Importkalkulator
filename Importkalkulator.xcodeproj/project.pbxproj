@@ -465,14 +465,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christian Mosveen (D4PBA3N5G9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christian Mosveen (XDH4LC5WXK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christian Mosveen (XDH4LC5WXK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Importkalkulator/Importkalkulator-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Importkalkulator/Importkalkulator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "1A2BEB49-96F5-4F97-B354-2640F45B6C4D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1A2BEB49-96F5-4F97-B354-2640F45B6C4D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -481,14 +483,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christian Mosveen (D4PBA3N5G9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christian Mosveen (XDH4LC5WXK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christian Mosveen (XDH4LC5WXK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Importkalkulator/Importkalkulator-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Importkalkulator/Importkalkulator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DE664E5D-EEEE-4E9B-BAB5-82CA3FE55D1D";
+				PROVISIONING_PROFILE = "1A2BEB49-96F5-4F97-B354-2640F45B6C4D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1A2BEB49-96F5-4F97-B354-2640F45B6C4D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
